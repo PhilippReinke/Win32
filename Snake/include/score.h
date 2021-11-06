@@ -1,6 +1,3 @@
-#ifndef SCORE_H
-#define SCORE_H
-
 #include <Windows.h>
 #include <iostream>
 #include <string>
@@ -9,6 +6,9 @@
 #include <sstream>
 #include <tuple>
 #include <map>
+
+#ifndef SCORE_H
+#define SCORE_H
 
 class Score
 {

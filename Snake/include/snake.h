@@ -1,9 +1,9 @@
-#ifndef SNAKE_H
-#define SNAKE_H
-
 #include <vector>
 #include <time.h>
 #include <Windows.h>
+
+#ifndef SNAKE_H
+#define SNAKE_H
 
 class Snake
 {

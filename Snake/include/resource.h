@@ -1,6 +1,6 @@
 #pragma once
 
-#define IDR_MENU						  101
+#define IDR_MENU              101
 #define ID_FILE_EXIT					40001
 #define ID_HELP_ABOUT					40002
 #define ID_VELOCITY_SLOW			40003

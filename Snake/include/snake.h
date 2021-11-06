@@ -1,14 +1,14 @@
+#ifndef SNAKE_H
+#define SNAKE_H
+
 #include <vector>
 #include <time.h>
 #include <Windows.h>
 
-#ifndef SNAKE_H
-#define SNAKE_H
-
 class Snake
 {
 public:
-	int iLength = -1;											// Länge der Schlange -> Anzahl der Glieder der Schlange
+	int iLength = -1;											// LÃ¤nge der Schlange -> Anzahl der Glieder der Schlange
 	unsigned iRichtung = 4;										// (1) hoch | (2) runter | (3) links | (4) rechts
 	BOOL bFood = false;											// Wurde Nahrung ausgeteilt
 	RECT rectFood;												// Position der Nahrung
@@ -18,7 +18,7 @@ public:
 	HBRUSH hBrushFood = CreateSolidBrush(RGB(255, 152, 131));	// Farbe der Nahrung
 	HBRUSH hBackground = CreateSolidBrush(RGB(240, 240, 240));	// Farbe des Hintergrundes
 	unsigned iTime = 125;										// Zeit in ms bis Schlang versetzt wird
-	unsigned int Schlangenbreite = 15;							// Länge und Breite der Kettenglieder der Schlange
+	unsigned int Schlangenbreite = 15;							// LÃ¤nge und Breite der Kettenglieder der Schlange
 
 public:
 	void resetSnake();

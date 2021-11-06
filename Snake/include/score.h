@@ -1,3 +1,6 @@
+#ifndef SCORE_H
+#define SCORE_H
+
 #include <Windows.h>
 #include <iostream>
 #include <string>
@@ -7,15 +10,12 @@
 #include <tuple>
 #include <map>
 
-#ifndef SCORE_H
-#define SCORE_H
-
 class Score
 {
 private:
-	unsigned int iCurrentlyScore = 0;		// momentaner Punktestand
-	std::string name = "unknown";			// Name des Spielers
-	std::multimap<int, std::string> score;	// gespeicherte Punktest‰nde
+	unsigned int iCurrentlyScore = 0;	// momentaner Punktestand
+	std::string name = "unknown";		// Name des Spielers
+	std::multimap<int, std::string> score;	// gespeicherte Punktest√§nde
 
 public:
 	void setScore(int score);

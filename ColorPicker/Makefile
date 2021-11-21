@@ -5,19 +5,22 @@ OBJS = obj/resource.o obj/main.o
 WARNS = -Wall
 
 # Names of tools to use when building
-CC 	= gcc
+CC 	= g++
 RC 	= windres
 EXE = ColorPicker.exe
 
 # Linker flags
-LDFLAGS = -s -lgdi32 -mwindows
+LDFLAGS = -mwindows
 
-# Compiler flags. Compile ANSI build only if CHARSET=ANSI.
+# Compiler flags
 CFLAGS = -O2 -D UNICODE -D _UNICODE -D _WIN32_IE=0x0500 -D WINVER=0x0500 ${WARNS} -Iinclude
 
 # Build the exectuable
 ${EXE}: ${OBJS}
 	${CC} -o "$@" ${OBJS} ${LDFLAGS}
+	if exist obj\* del /q obj\*
+	if exist obj  rmdir obj
+	./${EXE}
 
 # Create build output directories if they don't exist
 bin obj:

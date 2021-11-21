@@ -1,6 +1,6 @@
 #### 3D from Scratch - Triangle (in progress)
 <p float="left">
-  <img src="Screenshots/Triangle.png"/>
+  <img src="Screenshots/Triangle.png" width="50%"/>
 </p>
 
 #### ColorPicker

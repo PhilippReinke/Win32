@@ -181,8 +181,8 @@ LRESULT CALLBACK MainProc(HWND hWnd, UINT uiMessage, WPARAM wParam, LPARAM lPara
 					ShowWindow(hWindow, SW_HIDE); // verstecke MainWindow
 					ShowWindow(hSubWindow, SW_SHOWNORMAL); // zeige SubWindow
 					UpdateWindow(hSubWindow);
-					SetTimer(0, 0, isec * 1000 + imin * 60000, Timer_Shutdown);
-					SetTimer(hSubWindow, 1, 1000, 0);
+					SetTimer(0, 0, isec * 1000 + imin * 60000, (TIMERPROC) Timer_Shutdown);
+					SetTimer(hSubWindow, 1, 1000, NULL);
 					return 0;
 				}
 				// OK/Herunterfahren

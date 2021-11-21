@@ -9,15 +9,18 @@ CC 	= gcc
 RC 	= windres
 EXE = Herunterfahren.exe
 
-# Compiler flags. Compile ANSI build only if CHARSET=ANSI.
-CFLAGS = -O2 -D UNICODE -D _UNICODE -D _WIN32_IE=0x0500 -D WINVER=0x0500 ${WARNS} -Iinclude
-
 # Linker flags
-LDFLAGS = -s -lgdi32 -lstdc++ -mwindows
+LDFLAGS = -lgdi32 -lstdc++ -mwindows
+
+# Compiler flags
+CFLAGS = -O2 -D UNICODE -D _UNICODE -D _WIN32_IE=0x0500 -D WINVER=0x0500 ${WARNS} -Iinclude
 
 # Build the exectuable
 ${EXE}: ${OBJS}
 	${CC} -o "$@" ${OBJS} ${LDFLAGS}
+	if exist obj\* del /q obj\*
+	if exist obj  rmdir obj
+	./${EXE}
 
 # Create build output directories if they don't exist
 bin obj:
